@@ -126,7 +126,7 @@ brew install --cask koodo-reader
 
 ## Develop
 
-Make sure that you have installed yarn and git
+Make sure that you have installed [pnpm](https://pnpm.io) and git
 
 1. Download the repo
 
@@ -134,18 +134,22 @@ Make sure that you have installed yarn and git
    git clone https://github.com/koodo-reader/koodo-reader.git
    ```
 
-2. Enter desktop mode
+2. Install dependencies
 
    ```
-   yarn
-   yarn dev
+   pnpm install
    ```
 
-3. Enter web mode
+3. Enter desktop mode
 
    ```
-   yarn
-   yarn start
+   pnpm dev
+   ```
+
+4. Enter web mode
+
+   ```
+   pnpm start
    ```
 
 ## Translation

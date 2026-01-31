@@ -9,7 +9,7 @@
   },
   "engines": {
     "node": ">=20.0.0",
-    "npm": ">=6.0.0"
+    "pnpm": ">=8.0.0"
   },
   "repository": "https://github.com/koodo-reader/koodo-reader",
   "private": false,
@@ -111,7 +111,8 @@
     "release": "electron-builder",
     "prerelease": "react-scripts build",
     "postinstall": "sed 's/^#include .nan_scriptorigin\\.h./\\/\\/ #include nan_scriptorigin.h/' ./node_modules/nan/nan.h > ./node_modules/nan/nan.h.new && mv ./node_modules/nan/nan.h.new ./node_modules/nan/nan.h && electron-builder install-app-deps",
-    "rebuild": "electron-rebuild -f -w better-sqlite3"
+    "rebuild": "electron-rebuild -f -w better-sqlite3",
+    "preinstall": "npx only-allow pnpm"
   },
   "homepage": "./",
   "build": {
@@ -355,5 +356,6 @@
         "react-hot-loader/babel"
       ]
     ]
-  }
+  },
+  "packageManager": "pnpm@10.14.0+sha512.ad27a79641b49c3e481a16a805baa71817a04bbe06a38d17e60e2eaee83f6a146c6a688125f5792e48dd5ba30e7da52a5cda4c3992b9ccf333f9ce223af84748"
 }
